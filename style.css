@@ -4,11 +4,20 @@
 .body{
     font-family: 'Poppins';
     margin: 0;
+    background-color: #ece7e7;
+}
+.main{
+    background-color: #ece7e7;
 }
 .first-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.header-section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 20px 100px 100px 100px;
+    width: 970px;
 }
 .header-title{
     color: #3A3A3A;
@@ -45,5 +54,59 @@ hr{
     width: 50%;
     color: #3A3A3A;
     margin-bottom: 100px;
+}
+/* popular section styles */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    width: 970px;
+}
+.course{
+    height: 476px;
+    width: 329px;
+    border-radius: 10px;
+    padding-left: 14px;
+    background-color: white;
+}
+.popular-images{
+    height: 256px;
+    width: 300px;
+    border-radius: 5px;
+}
+.course-title{
+    font-size: 28px;
+    color: #18191F;
+    line-height: 5px;
+}
+.course-price{
+    font-size: 24px;
+    line-height: 5px;
+}
+.course-rating{
+    color: orange;
+    font-size: 12px;
+    line-height: 1px;
+}
+.rating{
+    color: #5E6366;
+    padding-left: 14px;
+}
+.course-shifting{
+    color: #787885;
+    font-size: 16px;
+    line-height: 3px;
+}
+
+.course-availablity{
+    color: #787885;
+    font-size: 16px;
+    line-height: 3px;
+}
+.buyers-safety{
+    color: #787885;
+    font-size: 16px;
+    line-height: 3px;
 }
 
