@@ -93,7 +93,7 @@ main{
     padding: 7px 14px;
 }
 .button-primary:hover{
-    transform: translateX(200);
+    transform: scale(1.04);
     transition: transform 3s ease-in;
     background-color: white;
     color: #E02C6D;
