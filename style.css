@@ -5,6 +5,11 @@ body{
     font-family: 'Poppins';
     margin: 0;
 }
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 .fa-arrow-right{
     font-size: 14px;
 }
@@ -12,15 +17,39 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
 }
 .header-section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 970px;
+    max-width: 970px;
 }
 .header-title{
     color: #3A3A3A;
     font-size: 24px;
+}
+.navigation-bar ul{
+    display: flex;
+    list-style: none;
+    justify-content:flex-end;
+    align-items: center;
+    margin: 25px 5px;
+    flex-wrap:wrap;
+}
+.navigation-bar ul li a{
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #3A3A3A;
+    border-radius: 5px;
+}
+.navigation-bar ul li a:hover{
+    background-color: #3A3A3A;
+    color: white;
+}
+.navigation-bar ul li a:active{
+    background-color: #E02C6D;
+    color: white;
 }
 .camera-picture img{
     height: 414px;
@@ -49,15 +78,32 @@ body{
 }
 
 /* header roller style */
-hr{
+#first-hr{
     width: 50%;
     color: #3A3A3A;
-    margin-bottom: 100px;
+    margin-bottom: 15px;
 }
+#second-hr{
+    width: 30%;
+    color: #3A3A3A;
+    margin-bottom: 80px;
+}
+/* brand section styles */
+.brand-part ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+.brand-part ul span{
+    display: flex;
+}
+.brand-part ul li{
+    margin: 5px 15px;
+}
+
 /* popular section styles */
-.popular-box{
-    margin-bottom: 100px;
-}
 .courses{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -126,6 +172,24 @@ hr{
     font-size: 18px;
     padding: 5px 10px;
 }
+/* featured product style  */
+.featured-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.featured-products{
+    max-width: 700px;
+    margin-bottom: 100px;
+}
+.featured-header{
+    font-size: 30px;
+}
+.featured-para{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* footer style  */
 footer{
     display: flex;
     flex-direction: column;
@@ -135,10 +199,138 @@ footer{
     justify-content: center;
     line-height: 2px;
     height: 150px;
+    flex-wrap: wrap;
 }
 .social-media i{
     background-color: #2d2a5d;
     padding: 5px;
     margin-left: 5px;
     border-radius: 15px;
+}
+
+/* mobile phone  */
+@media screen and (max-width: 576px){
+    .first-section{
+        align-items: center;
+        justify-content: center;
+    }
+    .header-section{
+        max-width: 576px;
+        grid-template-columns: 1fr;
+    }
+    .header-title{
+        text-align: flex-start;
+    }
+    .title{
+        order:2;
+    }
+    .title-picture{
+        order: 1;
+    }
+    .navigation-bar ul{
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 5px;
+        padding-left: 0;
+    }
+    .influent-para{
+        max-width: 550px;
+    }
+    .camera-picture img{
+        height: 300px;
+        width: 300px;
+        background-size: 300px 300px;
+        align-self: center;
+    }
+    .brand-part ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand-part ul span{
+        display: flex;
+    }
+    .courses{
+        max-width: 576px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .popular-box{
+        align-items: center;
+        justify-content: center;
+    }
+    .see-more-btn{
+        float: right;
+        margin-right: 250px;
+    }
+    .button-primary{
+        text-align: center;
+    }
+    footer{
+        justify-content: center;
+    }
+
+}
+
+/* tablet devices */
+
+@media screen and (min-width:577px) and (max-width: 768px){
+    .first-section{
+        align-items: center;
+        justify-content: center;
+    }
+    .header-section{
+        max-width: 750px;
+        grid-template-columns: 1fr;
+    }
+    .header-title{
+        text-align: flex-start;
+    }
+    .title{
+        order:2;
+    }
+    .title-picture{
+        order: 1;
+    }
+    .navigation-bar ul{
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 5px;
+        padding-left: 0;
+    }
+    .influent-para{
+        max-width: 740px;
+    }
+    .camera-picture img{
+        height: 500px;
+        width: 500px;
+        background-size: 500px 500px;
+        align-self: center;
+    }
+    .brand-part ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand-part ul span{
+        display: flex;
+    }
+    .courses{
+        max-width: 750px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .popular-box{
+        align-items: center;
+        justify-content: center;
+    }
+    .see-more-btn{
+        float: right;
+        margin-right: 350px;
+    }
+    .button-primary{
+        text-align: center;
+    }
+    footer{
+        justify-content: center;
+    }
+
 }
